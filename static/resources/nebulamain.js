@@ -167,13 +167,13 @@ window.addEventListener("load", () => {
               const _popout = window.open("/blob", "_self");
               const blob = _popout.document;
               // Write all of the neccesary page elements, and the Options including the cloak (if enabled)
-              // The blob writing is just the background elements, like the "Nebula is loading your content, please wait" screen. It does not carry proxied content, or even the iframe.
+              // The blob writing is just the background elements, like the "Thingsweb is loading your content, please wait" screen. It does not carry proxied content, or even the iframe.
               blob.write(`
            <script> 
            function handleTabLeave(activeInfo) {
   var link = document.querySelector("link[rel~='icon']");
   if (localStorage.getItem('ADVcloak') == "on") {
-  if (document.title == "Nebula") {
+  if (document.title == "Things Network") {
     if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
@@ -182,7 +182,7 @@ window.addEventListener("load", () => {
 link.href = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7AE3IF34XPGyseQjkXIOsWXpkZiLlMjSAwySjcJSPAwlv3hnGKi1&usqp=CAU';
     document.title = "Google"
   } else if (document.title == "Google") {
-    document.title = "Nebula"
+    document.title = "Things Network"
     if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
@@ -398,7 +398,7 @@ function log() {
   setTimeout(
     console.log.bind(
       console,
-      "%c If you are seeing this, Nebula's main script has succesfully loaded!",
+      "%c If you are seeing this, Things's main script has succesfully loaded!",
       "background: green;color:#FFF;padding:5px;border-radius: 5px;line-height: 26px; font-size:12px;"
     )
   );
@@ -670,7 +670,7 @@ browser = chrome;
 function handleTabLeave() {
   var link = document.querySelector("link[rel~='icon']");
   if (localStorage.getItem("ADVcloak") == "on") {
-    if (document.title == "Nebula") {
+    if (document.title == "Things Network") {
       if (!link) {
         link = document.createElement("link");
         link.rel = "icon";
@@ -680,7 +680,7 @@ function handleTabLeave() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo7AE3IF34XPGyseQjkXIOsWXpkZiLlMjSAwySjcJSPAwlv3hnGKi1&usqp=CAU";
       document.title = "Google";
     } else if (document.title == "Google") {
-      document.title = "Nebula";
+      document.title = "Things Network";
       if (!link) {
         link = document.createElement("link");
         link.rel = "icon";
