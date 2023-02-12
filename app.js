@@ -74,7 +74,7 @@ function getNewCode() {
   return seq;
 }
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const bareServer = createBareServer("/bare/", {
   logErrors: false,
   localAddress: undefined
